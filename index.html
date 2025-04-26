@@ -9,9 +9,9 @@
 </head>
 <body>
     <nav class="nav" role="navigation" aria-label="main navigation">
-        <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+        <div class="logo"><img src="img/logo.png" alt="Logo"></div>       
         <ul class="nav-links">
-            <li><a href="#">Conoceme</a></li>
+            <li><a href="#">Conóceme</a></li>
         </ul>
         <div class="social">
             <a href="https://www.instagram.com/niko_n_t/?next=%2F"><img src="img/ig.png" alt="Instagram"></a>
@@ -48,6 +48,38 @@
             </div>
         </div>
     </section>
-    
+    <section class="proyectos">
+        <div class="contenido">
+            <h2 class="titulo-proyectos">Proyectos</h2>
+            <div class="contenedor-proyectos">
+                <div class="proyecto">
+                    <img src="img/proyecto1.png" alt="Proyecto 1">
+                </div>
+                <div class="proyecto">
+                    <img src="img/proyecto2.png" alt="Proyecto 2">
+                </div>
+                <div class="proyecto">
+                    <img src="img/proyecto3.png" alt="Proyecto 3">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+          <p>&copy; 2025 Neira. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+      <script>
+    const nav = document.querySelector('.nav');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('scroll');
+        } else {
+            nav.classList.remove('scroll');
+        }
+    });
+</script>
+
 </body>
 </html>
