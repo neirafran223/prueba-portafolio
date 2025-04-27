@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../static/contacto.css">
+    <link rel="stylesheet" href="../static/app.js">
+    <link rel="icon" href="../img/logo.png">
+</head>
+<body>
+    <section id="contacto" class="contacto-section">
+        <div class="back-button">
+            <a href="../templates/index.html">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </a>
+        </div>
+        <h2 class="title">Contacto</h2>
+        <form id="contact-form" method="post" action="/send_email">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="email" name="email" placeholder="Correo electronico">
+            <textarea name="mensaje" placeholder="Mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <div id="flash-messages" class="flash-messages"></div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
