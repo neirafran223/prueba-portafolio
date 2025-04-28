@@ -4,20 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTAFOLIO</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='../img/logo.png') }}">
 </head>
 <body>
     <nav class="nav" role="navigation" aria-label="main navigation">
-        <div class="logo"><img src="../img/logo.png" alt="Logo"></div>       
-        <ul class="nav-links">
-            <li><a href="../templates/contacto.html">Contactame</a></li>
-        </ul>
-        <div class="social">
-            <a href="https://www.instagram.com/niko_n_t/?next=%2F"><img src="../img/ig.png" alt="Instagram"></a>
-            <a href="https://github.com/neirafran223"><img src="../img/git.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/francisco-nicolas-neira-tapia-644676224/"><img src="../img/link.png" alt="LinkedIn"></a>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='../img/logo.png') }}" alt="Logo">
+        </div>       
+        <div class="social-item">
+            <p class="ig">Instagram</p>
+            <a href="https://www.instagram.com/niko_n_t/?next=%2F">
+                <img src="{{ url_for('static', filename='../img/ig.png') }}" alt="Instagram">
+            </a>
         </div>
+        <div class="social-item">
+            <p class="git">GitHub</p>
+            <a href="https://github.com/neirafran223">
+                <img src="{{ url_for('static', filename='../img/git.png') }}" alt="GitHub">
+            </a>
+        </div>
+        <div class="social-item">
+            <p class="link">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/francisco-nicolas-neira-tapia-644676224/">
+                <img src="{{ url_for('static', filename='../img/link.png') }}" alt="LinkedIn">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('contacto') }}">Contactame</a></li>
+        </ul>
     </nav>
     <section class="hero">
         <div class="hero-body">
@@ -25,7 +40,7 @@
                 <div class="intro-text">
                     <h1 class="title">Designer & Frontend Developer</h1>
                     <p class="subtitle">Diseño y codifico cosas maravillosamente simples, y me encanta lo que hago.</p>
-                    <img class="avatar" src="../img/avatar.png" alt="Avatar">
+                    <img class="avatar" src="{{ url_for('static', filename='../img/avatar.png') }}" alt="Avatar">
                 </div>
             </div>
         </div>
@@ -33,18 +48,16 @@
     <section class="medium">
         <div class="medium-body">
             <div class="yo">
-                <h1 class="title">Hola, Mi nombre es Francisco neira</h1>
-                <p class="subtitle">Soy una persona proactiva, responsable y 
-                    apasionada por la tecnología. Me encanta aprender cosas nuevas, 
-                    resolver problemas y trabajar en equipo para crear soluciones eficientes 
-                    y funcionales. Durante mi formación como Ingeniero, desarrollé 
-                    habilidades sólidas en desarrollo web, bases de datos y diseño de 
-                    interfaces, con un enfoque especial en la experiencia del usuario. Siempre 
-                    estoy buscando mejorar mis habilidades y mantenerme actualizado 
-                    con las últimas tendencias tecnológicas.
-                    Me defino como alguien curioso, creativo y comprometido con la calidad. Creo 
-                    firmemente en el poder de la tecnología para transformar ideas en soluciones 
-                    reales que impacten positivamente a las personas.</p>
+                <h1 class="title">Hola, Mi nombre es Francisco Neira</h1>
+                <p class="subtitle">
+                    Soy una persona proactiva, responsable y apasionada por la tecnología. 
+                    Me encanta aprender cosas nuevas, resolver problemas y trabajar en equipo para crear soluciones eficientes y funcionales. 
+                    Durante mi formación como Ingeniero, desarrollé habilidades sólidas en desarrollo web, bases de datos y diseño de interfaces, 
+                    con un enfoque especial en la experiencia del usuario. 
+                    Siempre estoy buscando mejorar mis habilidades y mantenerme actualizado con las últimas tendencias tecnológicas.
+                    Me defino como alguien curioso, creativo y comprometido con la calidad. 
+                    Creo firmemente en el poder de la tecnología para transformar ideas en soluciones reales que impacten positivamente a las personas.
+                </p>
             </div>
         </div>
     </section>
@@ -53,25 +66,24 @@
             <h2 class="titulo-proyectos">Proyectos</h2>
             <div class="contenedor-proyectos">
                 <div class="proyecto">
-                    <img src="../img/proyecto1.png" alt="Proyecto 1">
+                    <img src="{{ url_for('static', filename='../img/proyecto1.png') }}" alt="Proyecto 1">
                 </div>
                 <div class="proyecto">
-                    <img src="../img/proyecto2.png" alt="Proyecto 2">
+                    <img src="{{ url_for('static', filename='../img/proyecto2.png') }}" alt="Proyecto 2">
                 </div>
                 <div class="proyecto">
-                    <img src="../img/proyecto3.png" alt="Proyecto 3">
+                    <img src="{{ url_for('static', filename='../img/proyecto3.png') }}" alt="Proyecto 3">
                 </div>
             </div>
         </div>
     </section>
     <footer class="main-footer">
         <div class="container">
-          <p>&copy; 2025 Neira. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Neira. Todos los derechos reservados.</p>
         </div>
-      </footer>
-      <script>
+    </footer>
+    <script>
     const nav = document.querySelector('.nav');
-
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             nav.classList.add('scroll');
@@ -79,7 +91,6 @@
             nav.classList.remove('scroll');
         }
     });
-</script>
-
+    </script>
 </body>
 </html>
